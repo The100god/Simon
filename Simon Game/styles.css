@@ -1,6 +1,7 @@
 body {
   text-align: center;
   background-color: #5ba8db;
+  margin: 0;
 }
 
 .background-name {
@@ -121,6 +122,19 @@ body {
   display: block;
 }
 
+/* css for footer */
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  clear: both;
+  position: relative;
+  height: 30px;
+  margin: 0%;
+  margin-top: 18%;
+  padding: 13px 0px;
+}
+
 /* css for large tablet */
 
 @media only screen and (min-width: 880px) and (max-width: 1105px) {
@@ -160,6 +174,9 @@ body {
   /* .dropup {
   margin: 0 25% 0 20%;
 } */
+  footer {
+    margin-top: 56%;
+  }
 }
 
 /* css for medium tablet screen */
@@ -205,6 +222,10 @@ body {
   .dropup {
     margin: 2% 25% 0% 23%;
   }
+
+  footer {
+    margin-top: 34%;
+  }
 }
 
 /* css for phone */
@@ -231,8 +252,8 @@ body {
   .dropup-content {
     position: relative;
     top: 10px;
-    overflow-y:auto;
-  height:33vh;
+    overflow-y: auto;
+    height: 33vh;
     width: 165%;
     font-size: 25px;
     margin-left: -33%;
@@ -240,10 +261,9 @@ body {
   }
 
   .dropbtn {
-  padding: 16px;
-  font-size: 4vw;
-   } 
- 
+    padding: 16px;
+    font-size: 4vw;
+  }
 
   .background-name {
     margin: 0% 0%;
@@ -253,5 +273,10 @@ body {
 
   .dropup {
     margin: 2% 25% 0% 23%;
+  }
+
+  footer {
+    height: 30px;
+    margin-top: 68%;
   }
 }
