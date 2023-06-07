@@ -16,6 +16,20 @@ $(document).keypress(function() {
   }
 });
 
+if( is_touch_enabled() ) {
+    $(document).(function() {
+        document.getElementById("bgname").style.display = "none"
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    });
+}
+
+function is_touch_enabled() {
+            return ( 'ontouchstart' in window ) ||
+                   ( navigator.maxTouchPoints > 0 ) ||
+                   ( navigator.msMaxTouchPoints > 0 );
+        }
+
 $(".btn").click(function() {
 
   var userChosenColour = $(this).attr("id");
