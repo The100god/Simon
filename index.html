@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8" />
+    <title>Simon</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Dosis:wght@200;300;400&family=Dancing+Script:wght@600&family=Lora&family=Oswald&family=PT+Sans&family=Playfair+Display&family=Playfair:ital,wght@1,900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <div id="bgname" class="background-name">
+      Simons
+    </div>
+    <h1 id="level-title">Press A Key to Start</h1>
+    <div class="container">
+      <div class="row">
+        <div type="button" id="green" class="btn green"></div>
+        <div type="button" id="red" class="btn red"></div>
+      </div>
+
+      <div class="row">
+        <div type="button" id="yellow" class="btn yellow"></div>
+        <div type="button" id="blue" class="btn blue"></div>
+      </div>
+    </div>
+
+    <div class="dropup">
+      <button onclick="myFunction()" class="dropbtn">Instruction</button>
+      <div id="myDropup" class="dropup-content">
+        <h2>Instructions: </h2>
+        <ol>
+          <li>Press a key to start game.</li>
+          <li>Simon will give the first signal. Repeat the signal by pressing the same color lens.</li>
+          <li>Simon will duplicate the first signal and add one. Repeat these two signals by pressing the same color lenses, in order.</li>
+          <li>Simon will duplicate these first two signals and add one.</li>
+          <li>Continue playing as long as you can repeat each sequence of sig- nals correctly. After the 5th, 9th and 13th signals in a sequence, Simon automatically speeds up.</li>
+          <li>If you fail to repeat a sequence exactly, or if you take more than 5 seconds to repeat a signal, Simon responds with a "RAZZ" sound. This means you've lost, and the sequence of signals ends.</li>
+        </ol>
+      </div>
+      
+    </div>
+
+    <footer>
+        <div class="center">
+            Copyright &copy: saurabh goyal. All rigths reserved!
+        </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="game.js" charset="utf-8"></script>
+  </body>
+</html>
