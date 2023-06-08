@@ -5,30 +5,27 @@ var gamePattern = [];
 var userClickedPattern = [];
 
 var started = false;
+var touched = false;
 var level = 0;
 
 $(document).keypress(function() {
-  if (!started) {
+  if (!started ) {
     document.getElementById("bgname").style.display = "none"
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
 });
-
-if( is_touch_enabled() ) {
-    $(function() {
-        document.getElementById("bgname").style.display = "none"
+document.addEventListener('touchstart',function(){
+  if( is_touch_enabled() && !touched) {
+    
+    document.getElementById("bgname").style.display = "none"
     $("#level-title").text("Level " + level);
     nextSequence();
-    });
-}
+    touched=true;
 
-function is_touch_enabled() {
-            return ( 'ontouchstart' in window ) ||
-                   ( navigator.maxTouchPoints > 0 ) ||
-                   ( navigator.msMaxTouchPoints > 0 );
-        }
+}}
+);
 
 $(".btn").click(function() {
 
@@ -40,6 +37,13 @@ $(".btn").click(function() {
 
   checkAnswer(userClickedPattern.length-1);
 });
+
+function is_touch_enabled() {
+  
+  return ( 'ontouchstart' in window ) ||
+          ( navigator.maxTouchPoints > 0 ) ||
+          ( navigator.msMaxTouchPoints > 0 );
+}
 
 function checkAnswer(currentLevel) {
 
@@ -92,6 +96,7 @@ function startOver() {
   level = 0;
   gamePattern = [];
   started = false;
+  touched = false;
 }
 
 function myFunction() {
