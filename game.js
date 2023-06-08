@@ -16,16 +16,15 @@ $(document).keypress(function() {
     started = true;
   }
 });
-document.addEventListener('touchstart',function(){
+$(document).addEventListener('touchstart',function(){
   if( is_touch_enabled() && !touched) {
     
     document.getElementById("bgname").style.display = "none"
     $("#level-title").text("Level " + level);
     nextSequence();
     touched=true;
-
-}}
-);
+  }
+});
 
 $(".btn").click(function() {
 
