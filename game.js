@@ -16,7 +16,7 @@ $(document).keypress(function() {
     started = true;
   }
 });
-$(document).addEventListener('touchstart',function(){
+document.addEventListener('touchstart',function(){
   if( is_touch_enabled() && !touched) {
     
     document.getElementById("bgname").style.display = "none"
