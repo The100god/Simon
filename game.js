@@ -17,7 +17,7 @@ $(document).keypress(function() {
 });
 
 if( is_touch_enabled() ) {
-    $(document).(function() {
+    $(function() {
         document.getElementById("bgname").style.display = "none"
     $("#level-title").text("Level " + level);
     nextSequence();
